@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>Library</OutputType>
+		<TargetFramework>net8.0</TargetFramework>
+		<RootNamespace>cs2_isyancilar</RootNamespace>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="CounterStrikeSharp.API" Version="1.0.335" />
+
+		<PackageReference Include="Dapper" Version="2.1.66">
+			<ExcludeAssets>runtime</ExcludeAssets>
+		</PackageReference>
+
+		<PackageReference Include="MySqlConnector" Version="2.4.0">
+			<ExcludeAssets>runtime</ExcludeAssets>
+		</PackageReference>
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="$(NuGetPackageRoot)dapper\2.1.66\lib\net8.0\Dapper.dll"
+			  Pack="false"
+			  CopyToOutputDirectory="PreserveNewest" />
+
+		<None Include="$(NuGetPackageRoot)mysqlconnector\2.4.0\lib\net8.0\MySqlConnector.dll"
+			  Pack="false"
+			  CopyToOutputDirectory="PreserveNewest" />
+	</ItemGroup>
+
+</Project>
